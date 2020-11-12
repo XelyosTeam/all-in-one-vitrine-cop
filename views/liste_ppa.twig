@@ -1,0 +1,34 @@
+{#
+  Le projet All in One est un produit Xelyos mis à disposition gratuitement
+  pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+  ne pas supprimer le ou les auteurs du projet.
+  Created by : Xelyos - Aros
+  Edited by :
+#}
+{# Liste des possesseur du PPA #}
+{% extends "base.twig" %}
+
+{% block style %}{% endblock %}
+
+{% block description %}Liste possesseur PPA{% endblock %}
+
+{% block key %}Liste PPA{% endblock %}
+
+{% block title %}- Liste PPA{% endblock %}
+
+{% block navigation %}
+  <p><a href="/">Accueil</a></p>
+  <p><a href="/Reglements">Règlements</a></p>
+  <p><a href="/Histoire">Histoire</a></p>
+{% endblock %}
+
+{% block main %}
+  <section class="contenu" style="text-align: left;">
+    {% for personne in ppa %}
+      <li style="margin-left: 100px;">{{ personne.nom|capitalize }} {{ personne.prenom|capitalize }}</li>
+      <!-- <p>{{ personne.nom|capitalize }} {{ personne.prenom|capitalize }}</p> -->
+    {% endfor %}
+  </section>
+{% endblock %}
+
+{% block script %}{% endblock %}

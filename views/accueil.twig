@@ -1,0 +1,57 @@
+{#
+  Le projet All in One est un produit Xelyos mis à disposition gratuitement
+  pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+  ne pas supprimer le ou les auteurs du projet.
+  Created by : Xelyos - Aros
+  Edited by :
+#}
+{# Génération de la page d'accueil #}
+{% extends "base.twig" %}
+
+{% block description %}Acceuil LSPD{% endblock %}
+
+{% block key %}Accueil{% endblock %}
+
+{% block title %}{% endblock %}
+
+{% block navigation %}
+  <p><a href="/Histoire">Histoire</a></p>
+  <p><a href="/Reglements">Règlements</a></p>
+  <p><a href="/Candidature" target="_blank">Candidature</a></p>
+{% endblock %}
+
+{% block main %}
+  <section class="contenu">
+    <h1>Site internet</h1>
+    <p>Bienvenue sur le site du LSPD. Ici, vous pourrez retrouver toutes les
+      informations nécessaires lors de votre aventure sur le Serveur GTA V
+      de Mexico Life.
+    </p>
+
+    <h1>Qui sommes nous ?</h1>
+    <p>Le Département de Police de Los Santos (LSPD) est une branche de
+      police de San Andreas service de la ville de Los Santos. Elle fait
+      respecter les lois que la ville de Los Santos a instaurées. Le LSPD
+      est l'élite de la police de Los Santos. Il est également en
+      collaboration avec plusieurs agences de sécurité et de renseignement.
+      Le LSPD dispose de plusieurs membres expérimentés, qui fournissent
+      des efforts considérables pour assurer la protection des citoyens de
+      Los Santos.
+    </p>
+    <a href="/Histoire">(lien : Découvrez ici toute l'histoire de la LSPD)</a>
+
+
+    <h1>Nous rejoindre !</h1>
+    <p>Tu souhaites nous rejoindre, pas de soucis, voici un lien direct vers notre Discord :</p>
+
+    <section class="discord">
+      <h6>Lien d'invitation Discord</h6>
+      <a href="{{ _adresseDiscord }}" target="_blank"><img src="/assets/img/logo_discord.png" alt="Logo Discord"></a>
+    </section>
+
+    <h1>Site Factice</h1>
+    <p>Nous vous rappelons que ce site est factice, il a été développé dans le cadre d'un jeu vidéo pour un serveur
+    GTA V Life. Aucune des informations que vous pourrez retrouver sur ce site n'est valable dans la vie réelle
+    (amende, règlement, inscription, etc...)</p>
+  </section>
+{% endblock %}

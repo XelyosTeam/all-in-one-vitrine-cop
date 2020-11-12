@@ -1,0 +1,43 @@
+/*
+  Le projet All in One est un produit Xelyos mis à disposition gratuitement
+  pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+  ne pas supprimer le ou les auteurs du projet.
+  Created by : Xelyos - Aros
+  Edited by :
+*/
+
+/* Phone */
+@media (max-width:1001px)
+{
+
+  .hid_tel
+  {
+    display: none;
+  }
+
+  body /* Trouver une solution pour l'améliorer */
+  {
+    /*background: #CACACA;*/
+    background-image: url(../../img/background_phone.jpg);
+    background-attachment: fixed;
+  }
+
+  header img
+  {
+    margin-top: 3%;
+    width: 20%;
+    height: auto;
+  }
+
+  .nav_bar
+  {
+    display: grid;
+    width: 75%;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 2%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    border-radius: 10px;
+    background-color: #103469;
+  }
+}

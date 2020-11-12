@@ -1,0 +1,53 @@
+{#
+  Le projet All in One est un produit Xelyos mis à disposition gratuitement
+  pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+  ne pas supprimer le ou les auteurs du projet.
+  Created by : Xelyos - Aros
+  Edited by :
+#}
+{# Page vierge pour les twig #}
+{% extends "base.twig" %}
+
+{% block style %}{% endblock %}
+
+{% block description %}Ammende LSPD{% endblock %}
+
+{% block key %}Amende{% endblock %}
+
+{% block title %}- Amende{% endblock %}
+
+{% block navigation %}
+  <p><a href="/">Accueil</a></p>
+  <p><a href="/Reglements">Règlements</a></p>
+  <p><a href="/Candidature" target="_blank">Candidature</a></p>
+{% endblock %}
+
+{% block main %}
+  <section class="contenu">
+    <h1>Délit routier</h1>
+    {% for delit in routier %}
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+    {% endfor %}
+  </section>
+
+  <section class="contenu">
+    <h1>Délit léger</h1>
+    {% for delit in leger %}
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+    {% endfor %}
+  </section>
+
+  <section class="contenu">
+    <h1>Délit moyen</h1>
+    {% for delit in moyen %}
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+    {% endfor %}
+  </section>
+
+  <section class="contenu">
+    <h1>Délit grave</h1>
+    {% for delit in grave %}
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+    {% endfor %}
+  </section>
+{% endblock %}
