@@ -13,7 +13,9 @@ vos joueurs.
 
 **<span style="color:red">Accéder à la présentatoin du projet All In One : </span><a href="https://xelyos.fr/wiki" target="_blank">lien</a>**
 
-_Pour accéder aux protocoles d'installation, vous devez être enregistré sur le wiki et accéder au lien suivant : [protocole d'installation](https://wiki.xelyos.fr/books/installation-projet-all-in-one)_
+_Pour accéder aux protocoles d'installation accéder au lien suivant : [protocole d'installation](https://wiki.xelyos.fr/books/installation-projet-all-in-one)_
+
+_Support Discord : [Discord](https://xelyos.fr/discord)_
 
 ## Aperçu
 ![Aperçu](http://images.xelyos.fr/git/all-in-one/apercu-vitrine-cop.png)
