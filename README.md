@@ -11,7 +11,7 @@ système centralisé et poussé, avec des fonctionnalités permettant d’améli
 vos joueurs.
 
 
-**<span style="color:red">Accéder à la présentatoin du projet All In One : </span><a href="https://xelyos.fr/wiki" target="_blank">lien</a>**
+**<span style="color:red">Accéder à la présentation du projet All In One : </span><a href="https://xelyos.fr/wiki" target="_blank">lien</a>**
 
 _Pour accéder aux protocoles d'installation accéder au lien suivant : [protocole d'installation](https://wiki.xelyos.fr/books/installation-projet-all-in-one)_
 

@@ -14,7 +14,7 @@ nav
   left: 3%;
   top: 47%;
   border-radius: 10px;
-  background-color: #EDEFF5;
+  background-color: var(--background);
   padding: 1% 1% 1% 1%;
 }
 
@@ -29,7 +29,7 @@ nav a
 
 nav a:hover
 {
-  color: #103469;
+  color: var(--Text);
 }
 
 nav p

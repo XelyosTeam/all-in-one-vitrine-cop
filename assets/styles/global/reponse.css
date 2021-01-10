@@ -13,7 +13,7 @@ nav
   left: 3%;
   top: 47%;
   border-radius: 10px;
-  background-color: #EDEFF5;
+  background-color: var(--background);
   padding: 1% 1% 1% 1%;
 }
 
@@ -28,14 +28,14 @@ nav a
 
 nav a:hover
 {
-  color: #103469;
+  color: var(--Text);
 }
 
 nav p
 {
   font-weight: bold;
   text-decoration: underline;
-  color: #103469;
+  color: var(--Text);
   font-size: 1.2em;
 }
 
@@ -47,7 +47,7 @@ nav p
   margin-left: 25%;
   margin-right: 25%;
   border-radius: 10px;
-  background-color: #EDEFF5;
+  background-color: var(--background);
 }
 
 .contenu h1
@@ -55,8 +55,8 @@ nav p
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
-  color: #103469;
-  border-bottom: 2px solid #103469;
+  color: var(--Text);
+  border-bottom: 2px solid var(--Text);
 }
 
 .contenu  div
@@ -70,7 +70,7 @@ nav p
   margin-left: 3%;
   text-align: left;
   font-weight: bold;
-  color: #103469;
+  color: var(--Text);
   font-size: 1.25em;
 }
 
@@ -80,8 +80,8 @@ nav p
   margin-bottom: 2%;
   width: 45%;
   height: 20%;
-  background-color: #EDEFF5;
-  color: #103469;
+  background-color: var(--background);
+  color: var(--Text);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -94,8 +94,8 @@ nav p
   margin-left: 10%;
   padding: 1%;
   width: 80%;
-  background-color: #EDEFF5;
-  color: #103469;
+  background-color: var(--background);
+  color: var(--Text);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -108,8 +108,8 @@ nav p
   margin-bottom: 2%;
   width: 45%;
   height: 20%;
-  background-color: #EDEFF5;
-  color: #103469;
+  background-color: var(--background);
+  color: var(--Text);
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -131,8 +131,8 @@ nav p
   margin-bottom: 2%;
   border: none;
   border-radius: 10px;
-  background-color: #103469;
-  color: #fff;
+  background-color: var(--Bouton);
+  color: var(--BoutonText);
   padding: 2%;
   font-size: 1.25em;
 }

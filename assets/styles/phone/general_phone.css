@@ -17,7 +17,6 @@
 
   body /* Trouver une solution pour l'améliorer */
   {
-    /*background: #CACACA;*/
     background-image: url(../../img/background_phone.jpg);
     background-attachment: fixed;
   }
@@ -38,6 +37,6 @@
     margin-left: 12.5%;
     margin-right: 12.5%;
     border-radius: 10px;
-    background-color: #103469;
+    background-color: var(--navBarBack);
   }
 }

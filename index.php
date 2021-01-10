@@ -66,7 +66,7 @@
 
   Flight::route('/Candidature', function()
   {
-    $response = Requests::get('https://' . serveurIni('Serveur', 'url_intranet') . '/recrutement/etat');
+    $response = Requests::get('http://' . serveurIni('Serveur', 'url_intranet') . '/recrutement/etat');
     $result = json_decode($response->body)->etat;
     switch ($result) {
       case 0:

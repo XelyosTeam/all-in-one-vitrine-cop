@@ -5,12 +5,14 @@
   Created by : Xelyos - Aros
   Edited by :
 #}
+
 {# Modèle de page#}
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="/assets/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/color.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/global/general.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/global/page.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/phone/general_phone.css">
@@ -19,7 +21,7 @@
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="author" content="Xelyos Team - Thomas">
     <meta name="keywords" content="{% block key %}{% endblock %}, {{ _nomFaction }}, Site Factice, {{ _jeuServeur }}, {{ _nomServeur }}">
-    <title>{{ _nomFaction }} {% block title %}{% endblock %}</title>
+    <title>LSPD {% block title %}{% endblock %}</title>
   </head>
 
   <body>
@@ -30,7 +32,7 @@
         <p class="hid_tel"></p>
         <p class="hid_tel"></p>
         {% block navigation %}{% endblock %}
-        <p><a href="//{{ _URLIntranet }}/" target="_blank">Intranet</a></p>
+        <p><a href="http://{{ _URLIntranet }}/" target="_blank">Intranet</a></p>
         <p class="hid_tel"></p>
         <p class="hid_tel"></p>
       </div>
@@ -41,7 +43,7 @@
     </main>
 
     <footer>
-      <p>{{ _nomFaction }}</p>
+      <p>Los Santos Police Departement</p>
       <p>2020</p>
       <p>Developped by Xelyos Team</p>
     </footer>

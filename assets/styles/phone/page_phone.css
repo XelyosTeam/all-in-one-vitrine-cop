@@ -16,7 +16,7 @@
     left: 0.25%;
     top: 47%;
     border-radius: 10px;
-    background-color: #EDEFF5;
+    background-color: var(--background);
     padding: 1% 1% 1% 1%;
   }
 
@@ -27,7 +27,7 @@
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 10px;
-    background-color: #EDEFF5;
+    background-color: var(--background);
     text-align: center;
   }
 }
