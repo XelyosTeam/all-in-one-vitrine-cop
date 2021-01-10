@@ -42,7 +42,7 @@
 
   function serveurIni($categorie, $param)
   {
-    $params = parse_ini_file("xlsServerINI.ini", true); // Insertion du fichier : server.ini
+    $params = parse_ini_file("server.ini", true); // Insertion du fichier : server.ini
     return $params[$categorie][$param];
   }
 ?>
