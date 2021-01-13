@@ -1,5 +1,7 @@
 # Site Vitrine Cop
 
+![Developper Aros](http://images.xelyos.fr/md_status/developper/Aros.png)
+
 ## Introduction
 Vous en avez marre d’utiliser des googles docs, ou encore des forums pour gérer vos services
 publics ?
