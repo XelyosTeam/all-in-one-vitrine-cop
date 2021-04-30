@@ -54,7 +54,25 @@
 
   Flight::route('/Reglements', function()
   {
-    Flight::view()->display('rules_lspd.twig');
+    $path = dirname(__FILE__);
+    $struct = getStructure($path);
+
+    $names = new ArrayObject();
+    foreach ($struct->navigation as $value) {
+      $names->append($value);
+    }
+
+    $files = new ArrayObject();
+    foreach ($struct->contenu as $value) {
+      $value->fichier = getFileContent($path, $value->fichier);
+      $value->fichier = renderHTMLFromMarkdown($value->fichier);
+      $files->append($value);
+    }
+
+    Flight::view()->display('rules_lspd.twig', array(
+      'index' => $names,
+      'content' => $files
+    ));
   });
 
   Flight::route('/liste-ppa', function()

@@ -1,0 +1,69 @@
+{
+  "navigation": [
+    {
+      "nom": "Code interne au LSPD",
+      "identifiant": "interne"
+    },
+    {
+      "nom": "Code élève LSPD",
+      "identifiant": "eleve"
+    },
+    {
+      "nom": "Code de la route",
+      "identifiant": "route"
+    },
+    {
+      "nom": "Code pénal",
+      "identifiant": "penal"
+    },
+    {
+      "nom": "Interaction gang",
+      "identifiant": "gang"
+    },
+    {
+      "nom": "Intervention policière",
+      "identifiant": "intervention"
+    },
+    {
+      "nom": "Loi Miranda",
+      "identifiant": "miranda"
+    }
+  ],
+  "contenu": [
+    {
+      "identifiant": "interne",
+      "fichier": "interne.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "eleve",
+      "fichier": "eleve.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "route",
+      "fichier": "route.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "penal",
+      "fichier": "penal.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "gang",
+      "fichier": "gang.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "intervention",
+      "fichier": "intervention.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "miranda",
+      "fichier": "miranda.md",
+      "type": "miranda"
+    }
+  ]
+}

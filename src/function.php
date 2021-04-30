@@ -6,6 +6,8 @@
     Created by : Xelyos - Aros
     Edited by :
   */
+  use Michelf\Markdown;
+  
   function ajout_bdd($discord, $nom, $prenom, $phone, $age_ig, $age_irl, $tps_serv, $tps_gta, $retour_faction, $detail_faction, $candid_time_school, $ecole, $candid_time_vacances, $vacances, $candid_time_work, $work, $objectif, $candid_motivations, $candid_intervention, $candid_k9, $concat)
   {
     $candidature = Model::factory('Candidature')->create();
@@ -39,10 +41,22 @@
   }
 
 
-
   function serveurIni($categorie, $param)
   {
     $params = parse_ini_file("server.ini", true); // Insertion du fichier : server.ini
     return $params[$categorie][$param];
+  }
+
+  function getStructure($path) {
+    $file = file_get_contents($path . "/content/index.json", TRUE);
+    return json_decode($file);
+  }
+
+  function getFileContent($path, $file) {
+    return file_get_contents($path . "/content/" . $file);
+  }
+
+  function renderHTMLFromMarkdown($string_markdown_formatted) {
+    return Markdown::defaultTransform($string_markdown_formatted);
   }
 ?>
