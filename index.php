@@ -11,9 +11,8 @@
   /* Associer Flight à Twig */
   $loader = new \Twig\Loader\FilesystemLoader(dirname(__FILE__) . '/views');
   $twigConfig = array(
-      // 'cache' => './cache/twig/',
-      // 'cache' => false,
-      'debug' => true,
+      'cache' => './cache/twig/',
+      // 'debug' => true,
   );
 
   Flight::register('view', '\Twig\Environment', array($loader, $twigConfig), function ($twig)
