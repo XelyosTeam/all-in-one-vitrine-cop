@@ -7,7 +7,7 @@
     Edited by :
   */
   use Michelf\Markdown;
-  
+
   function ajout_bdd($discord, $nom, $prenom, $phone, $age_ig, $age_irl, $tps_serv, $tps_gta, $retour_faction, $detail_faction, $candid_time_school, $ecole, $candid_time_vacances, $vacances, $candid_time_work, $work, $objectif, $candid_motivations, $candid_intervention, $candid_k9, $concat)
   {
     $candidature = Model::factory('Candidature')->create();
@@ -41,9 +41,8 @@
   }
 
 
-  function serveurIni($categorie, $param)
-  {
-    $params = parse_ini_file("server.ini", true); // Insertion du fichier : server.ini
+  function serveurIni($categorie, $param) {
+    $params = parse_ini_file(".env", true);
     return $params[$categorie][$param];
   }
 
