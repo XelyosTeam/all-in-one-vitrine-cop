@@ -1,67 +1,76 @@
 {
   "navigation": [
     {
-      "nom": "Code interne au LSPD",
-      "identifiant": "interne"
-    },
-    {
-      "nom": "Code élève LSPD",
-      "identifiant": "eleve"
+      "nom": "Loi fédérale",
+      "identifiant": "loi-federale"
     },
     {
       "nom": "Code de la route",
-      "identifiant": "route"
+      "identifiant": "code-route"
     },
     {
-      "nom": "Code pénal",
-      "identifiant": "penal"
+      "nom": "Espace aérien",
+      "identifiant": "espace-aerien"
     },
     {
-      "nom": "Interaction gang",
-      "identifiant": "gang"
+      "nom": "Procédure pénale",
+      "identifiant": "procedure-penale"
+    },
+    {
+      "nom": "Code Interne",
+      "identifiant": "code-interne"
+    },
+    {
+      "nom": "Code élève",
+      "identifiant": "code-eleve"
     },
     {
       "nom": "Intervention policière",
-      "identifiant": "intervention"
+      "identifiant": "intervention-policiere"
     },
     {
       "nom": "Loi Miranda",
-      "identifiant": "miranda"
+      "identifiant": "loi-miranda"
     }
   ],
   "contenu": [
     {
-      "identifiant": "interne",
+      "identifiant": "loi-federale",
+      "fichier": "loi-federal.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "code-route",
+      "fichier": "code-route.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "procedure-penale",
+      "fichier": "procedure-penale.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "espace-aerien",
+      "fichier": "espace-aerien.md",
+      "type": "normal"
+    },
+    {
+      "identifiant": "code-interne",
       "fichier": "interne.md",
       "type": "normal"
     },
     {
-      "identifiant": "eleve",
+      "identifiant": "code-eleve",
       "fichier": "eleve.md",
       "type": "normal"
     },
     {
-      "identifiant": "route",
-      "fichier": "route.md",
-      "type": "normal"
-    },
-    {
-      "identifiant": "penal",
-      "fichier": "penal.md",
-      "type": "normal"
-    },
-    {
-      "identifiant": "gang",
-      "fichier": "gang.md",
-      "type": "normal"
-    },
-    {
-      "identifiant": "intervention",
+      "identifiant": "intervention-policiere",
       "fichier": "intervention.md",
       "type": "normal"
     },
     {
-      "identifiant": "miranda",
+      "identifiant": "loi-miranda",
       "fichier": "miranda.md",
       "type": "miranda"
     }

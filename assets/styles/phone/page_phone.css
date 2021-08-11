@@ -7,11 +7,8 @@
 */
 
 /* Phone */
-@media (max-width:1001px)
-{
-
-  nav
-  {
+@media (max-width:1001px) {
+  nav {
     position: fixed;
     left: 0.25%;
     top: 47%;
@@ -20,8 +17,7 @@
     padding: 1% 1% 1% 1%;
   }
 
-  .contenu
-  {
+  .contenu {
     display: block;
     margin-top: 2%;
     margin-left: 20%;

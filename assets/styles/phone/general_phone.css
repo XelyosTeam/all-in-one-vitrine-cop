@@ -7,29 +7,24 @@
 */
 
 /* Phone */
-@media (max-width:1001px)
-{
+@media (max-width:1001px) {
 
-  .hid_tel
-  {
+  .hid_tel {
     display: none;
   }
 
-  body /* Trouver une solution pour l'améliorer */
-  {
+  body {
     background-image: url(../../img/background_phone.jpg);
     background-attachment: fixed;
   }
 
-  header img
-  {
+  header img {
     margin-top: 3%;
     width: 20%;
     height: auto;
   }
 
-  .nav_bar
-  {
+  .nav_bar {
     display: grid;
     width: 75%;
     grid-template-columns: repeat(4,1fr);

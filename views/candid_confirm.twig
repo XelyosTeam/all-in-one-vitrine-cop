@@ -1,0 +1,31 @@
+{#
+Le projet All in One est un produit Xelyos mis à disposition gratuitement
+pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+ne pas supprimer le ou les auteurs du projet.
+Created by : Xelyos - Aros
+Edited by :
+#}
+
+{# Page vierge pour les twig #}
+{% extends "base.twig" %}
+
+{% block description %}confirmation Candidature{% endblock %}
+
+{% block key %}confirmation Candidature{% endblock %}
+
+{% block title %}- Candidature envoyée{% endblock %}
+
+{% block navigation %}
+  <p><a href="/Histoire">Histoire</a></p>
+  <p><a href="/Reglements">Règlements</a></p>
+  <p><a href="/Candidature" target="_blank">Candidature</a></p>
+{% endblock %}
+
+{% block main %}
+<div class="contenu">
+  <h1>Candidature envoyée</h1>
+
+  <p>Votre candidature a bien été prise en compte !</p>
+  <a href="/">Retourné à l'accueil</a>
+</div>
+{% endblock %}
