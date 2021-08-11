@@ -27,28 +27,28 @@
   <section class="contenu">
     <h1>Délit routier</h1>
     {% for delit in routier %}
-      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }} {{ _Devise }} - {{delit.temps_prison}} mois - {{delit.retrait}} point(s)</p>
     {% endfor %}
   </section>
 
   <section class="contenu">
     <h1>Délit léger</h1>
     {% for delit in leger %}
-      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }} {{ _Devise }} - {{delit.temps_prison}} mois</p>
     {% endfor %}
   </section>
 
   <section class="contenu">
     <h1>Délit moyen</h1>
     {% for delit in moyen %}
-      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }} {{ _Devise }} - {{delit.temps_prison}} mois</p>
     {% endfor %}
   </section>
 
   <section class="contenu">
     <h1>Délit grave</h1>
     {% for delit in grave %}
-      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }}$ - {{delit.temps_prison}} mois</p>
+      <p><stong>{{ delit.intitule }} : </strong>{{ delit.amende }} {{ _Devise }} - {{delit.temps_prison}} mois</p>
     {% endfor %}
   </section>
 {% endblock %}

@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "type": "list",
+      "title": "Comment s'appelle la force d'intervention du LSPD ?",
+      "ecole": "Force d'intervention",
+      "responses": [
+        "GIGN - Le Groupe d'intervention de la Gendarmerie National",
+        "NOOSE",
+        "Le RAID",
+        "SWAT",
+        "Force d'intervention de la LSPD"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "Qu'est-ce que l'unité K9 ?",
+      "ecole": "Unité K9"
+    },
+    {
+      "type": "list",
+      "title": "Quelle est la meilleur arme du policier ?",
+      "ecole": "Meilleur Arme",
+      "responses": [
+        "Fusil d'assault",
+        "Parole",
+        "Tazer",
+        "Sniper",
+        "Batteuse",
+        "Camion anti-émeute"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Comment s'appelle le lieu de vie d'un policier ?",
+      "ecole": "Lieu de vie",
+      "responses": [
+        "Un régiment",
+        "Une brigade",
+        "Un commissariat"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Les policiers sont-ils obligés de respecter le code de la route ?",
+      "ecole": "Code de la route",
+      "responses": [
+        "Non",
+        "Oui"
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Vous recevez un ordre de votre supérieur, mais cet ordre vous met en danger : Que faîtes vous ?",
+      "ecole": "Ordre dangereux",
+      "responses": [
+        "Je le fais",
+        "Je refuse",
+        "J'en discute avec lui"
+      ]
+    }
+  ]
+}

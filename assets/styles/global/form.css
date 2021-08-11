@@ -7,8 +7,7 @@
 */
 
 /* Global */
-nav
-{
+nav {
   position: fixed;
   left: 3%;
   top: 47%;
@@ -17,8 +16,7 @@ nav
   padding: 1% 1% 1% 1%;
 }
 
-nav a
-{
+nav a {
   display: block;
   padding-top: 1%;
   text-decoration: none;
@@ -26,21 +24,18 @@ nav a
   font-size: 1.1em;
 }
 
-nav a:hover
-{
+nav a:hover {
   color: var(--Text);
 }
 
-nav p
-{
+nav p {
   font-weight: bold;
   text-decoration: underline;
   color: var(--Text);
   font-size: 1.2em;
 }
 
-.contenu
-{
+.contenu {
   display: block;
   margin-top: 2%;
   margin-left: 25%;
@@ -49,8 +44,7 @@ nav p
   background-color: var(--background);
 }
 
-.contenu h1
-{
+.contenu h1 {
   text-align: center;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -58,14 +52,12 @@ nav p
   border-bottom: 2px solid var(--Text);
 }
 
-.contenu div
-{
+.contenu div {
   display: grid;
   grid-template-columns: 40% 60% repeat(2, 1fr);
 }
 
-.contenu div label
-{
+.contenu div label {
   margin-bottom: 10%;
   text-align: right;
   font-weight: bold;
@@ -73,8 +65,7 @@ nav p
   font-size: 1.25em;
 }
 
-.contenu div input
-{
+.contenu div input {
   border: none;
   border-bottom: 1px solid #000;
   /* margin-top: auto; */
@@ -88,8 +79,7 @@ nav p
   font-size: 1.5em;
 }
 
-.contenu div textarea
-{
+.contenu div textarea {
   border: none;
   border-bottom: 1px solid #000;
   text-align: justify;
@@ -103,8 +93,7 @@ nav p
   font-size: 1.5em;
 }
 
-.contenu div select
-{
+.contenu div select {
   border: none;
   border-bottom: 1px solid #000;
   margin-left: 10%;
@@ -117,13 +106,11 @@ nav p
   font-size: 1.5em;
 }
 
-.contenu .btn
-{
+.contenu .btn {
   text-align: right;
 }
 
-.contenu .btn button
-{
+.contenu .btn button {
   text-align: center;
   width: 20%;
   margin-left: 55%;
@@ -136,8 +123,7 @@ nav p
   font-size: 1.25em;
 }
 
-.grille_dispo
-{
+.grille_dispo {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(5,1fr);
@@ -146,13 +132,22 @@ nav p
   text-align: center;
 }
 
-.grille_dispo p:not(.except)
-{
+.grille_dispo p:not(.except) {
   text-align: right;
   vertical-align: middle;
 }
 
-.grille_dispo .except
-{
+.grille_dispo .except {
   text-align: center;
+}
+
+.alertTaille {
+  display: none;
+  margin: 0 auto;
+  color: var(--textAlert);
+}
+
+.alertTaille p {
+  text-align: center;
+  padding: 0;
 }

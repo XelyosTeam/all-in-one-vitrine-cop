@@ -1,0 +1,92 @@
+/*
+  Le projet All in One est un produit Xelyos mis à disposition gratuitement
+  pour tous les serveurs de jeux Role Play. En échange nous vous demandons de
+  ne pas supprimer le ou les auteurs du projet.
+  Created by : Xelyos - Aros
+  Edited by :
+*/
+
+/*
+  Source : https://codemyui.com/css-only-text-glitch-and-jerk-effect/
+*/
+
+/* Page 404 */
+.page404 {
+  display: block;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 10px;
+  background-color: var(--background);
+}
+
+.page404 h1 {
+  text-align: center;
+  color: var(--Text);
+  padding-top: 20px;
+}
+
+.page404 img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+/* Animation glitch */
+.page404 div {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64% {
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60% {
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62% {
+    transform: translate(0,0) skew(5deg);
+  }
+}
+
+.page404 div:before, .page404 div:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.page404 div:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,64% {
+    transform: translate(2px,-2px);
+  }
+  4%,60% {
+    transform: translate(-2px,2px);
+  }
+  62% {
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+.page404 div:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,64% {
+    transform: translate(-2px,0);
+  }
+  4%,60% {
+    transform: translate(-2px,0);
+  }
+  62% {
+    transform: translate(-22px,5px) skew(21deg);
+  }
+}

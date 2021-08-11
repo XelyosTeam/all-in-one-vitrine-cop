@@ -8,8 +8,7 @@
 
 /* PC */
 
-nav
-{
+nav {
   position: fixed;
   left: 3%;
   top: 47%;
@@ -18,8 +17,7 @@ nav
   padding: 1% 1% 1% 1%;
 }
 
-nav a
-{
+nav a {
   display: block;
   padding-top: 1%;
   text-decoration: none;
@@ -27,34 +25,18 @@ nav a
   font-size: 1.1em;
 }
 
-nav a:hover
-{
+nav a:hover {
   color: var(--Text);
 }
 
-nav p
-{
+nav p {
   font-weight: bold;
   text-decoration: underline;
   color: #103469;
   font-size: 1.2em;
 }
 
-
-.contenu
-{
-  display: block;
-  margin-top: 2%;
-  margin-left: 25%;
-  margin-right: 15%;
-  border-radius: 10px;
-  background-color: #EDEFF5;
-  text-align: center;
-}
-
-
-.contenu
-{
+.contenu {
   display: block;
   margin-top: 2%;
   margin-left: 20%;
@@ -64,15 +46,13 @@ nav p
   text-align: center;
 }
 
-.contenu h1
-{
+.contenu h1 {
   padding-top: 1%;
   padding-left: 2%;
   color: #103469;
 }
 
-.contenu h2
-{
+.contenu h2 {
   text-align: left;
   padding-top: 1%;
   padding-left: 2%;
@@ -80,57 +60,59 @@ nav p
   text-decoration: underline;
 }
 
-.contenu h3
-{
+.contenu h3 {
   text-align: left;
   margin-bottom: -2%;
   padding-left: 2%;
   text-decoration: underline;
 }
 
-.contenu p
-{
+.contenu p {
   padding: 0 4% 2% 4%;
   text-align: justify;
   font-size: 1.5em;
 }
 
-.contenu a
-{
+.contenu a {
   padding: 0% 2% 2% 2%;
   text-align: center;
   font-size: 1.25em;
   color: #000;
 }
 
-.contenu a:hover
-{
+.contenu a:hover {
   color: #103469;
   text-decoration: underline;
 }
 
 /* Lien d'invitation discord */
-.contenu .discord
-{
+.contenu .discord {
   margin-top: 5%;
 }
 
-.contenu .discord a img
-{
+.contenu .discord a img {
   width: 20%;
   height: auto;
 }
 
+.contenu ul, .contenu ol {
+  text-align: justify;
+  padding: 0 4% 2% 4%;
+  font-size: 1.5em;
+}
+
+.contenu ul li ul li, .contenu ul li ol li {
+  font-size: .7em;
+}
+
 /* Loi Miranda */
-.miranda p
-{
+.miranda p {
   text-align: center;
   font-size: 1.25em;
   font-style: oblique;
 }
 
-.miranda p strong
-{
+.miranda p strong {
   text-align: center;
   font: italic small-caps bold 16px/2 cursive;
   color: #A81616;

@@ -3,6 +3,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
 
+# Redirection https automatique
+# RewriteCond %{SERVER_NAME} =intranet-lspd.xelyos.fr
+# RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
 <Files ".env">
   Order Allow,Deny
   Deny from all
