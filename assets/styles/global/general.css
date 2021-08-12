@@ -29,7 +29,7 @@ h6 {
   margin-bottom: -5%;
 }
 
-body 
+body {
   background-image: url(../../img/background.png);
   background-attachment: fixed;
 }
