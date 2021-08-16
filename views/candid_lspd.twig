@@ -27,148 +27,80 @@
 
 {% block main %}
   <form class="connexion" action="/ajout-candidature" enctype="multipart/form-data" method="post">
-
-    <section class="contenu">
-      <h1>Inscription Civil</h1>
-        <div>
-          <label for="dicord">Identifiant Discord :</label>
-          <input type="text" name="candid_discord" id="dicord" placeholder="Entrer votre identifiant discord" required>
-        </div>
-
-        <div>
-          <label for="phone">Téléphone (IG) :</label>
-          <input type="tel" name="candid_phone" id="phone" placeholder="Numéro de téléphone" required>
-        </div>
-    </section>
-
-    <section class="contenu">
-      <h1>Présentation</h1>
-
-      <div>
-        <label for="name">Nom (IG) :</label>
-        <input type="text" name="candid_name" id="name" placeholder="Nom" required>
-      </div>
-
-      <div>
-        <label for="firstname">Prénom (IG) :</label>
-        <input type="text" name="candid_firstname" id="firstname" placeholder="Prénom" required>
-      </div>
-
-      <div>
-        <label for="age_ig">Age(IG) :</label>
-        <input type="number" name="candid_ig" id="age_ig" min="17" max="60" placeholder="Age IG" required>
-      </div>
-
-      <div>
-        <label for="age_irl">Age(IRL) :</label>
-        <input type="number" name="candid_irl" id="age_irl"  min="14" max="80" placeholder="Age IRL" required>
-      </div>
-    </section>
-
-    <section class="contenu">
-      <h1>Information</h1>
-
-      <div>
-        <label for="server_time">Temps de jeu sur le serveur :</label>
-        <input type="number" name="candid_server_time" id="server_time"  min="0" placeholder="Temps en heure" required>
-      </div>
-
-      <div>
-        <label for="gta_time">Temps de jeu GTA RP :</label>
-        <input type="number" name="candid_gta_time" id="gta_time"  min="0" placeholder="Temps en heure" required>
-      </div>
-
-      <div>
-        <label id="force" for="faction">Avez-vous déjà été membres des forces de l'ordre ?</label>
-        <select name="candid_faction" id="faction" onchange="change_force()">
-          <option value="0">Non</option>
-          <option value="1">Oui</option>
-        </select>
-      </div>
-
-      <div id="force_suite">
-        <label for="detail_faction">Laquelle et à quel poste ?</label>
-        <input type="text" name="candid_detail_faction" id="detail_faction" placeholder="Nom + poste">
-      </div>
-    </section>
-
-    {# Saisie des disponibilité #}
-    {% set __superVar = [] %}
-    {% set __ecole = { 'titre': "Periode scolaire/alternance", 'label': "time_school", 'type' : 'school' } %}
-    {% set __travail = { 'titre': "Periode de Travail/Stage/Alternance", 'label': "time_work", 'type' : 'work' } %}
-    {% set __vacance = { 'titre': "Periode de vacances", 'label': "time_vacances", 'type' : 'vacances' } %}
-
-    {% set __types = ['school', 'work', 'vacances'] %}
     {% set __days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'] %}
     {% set __hzs = ['am', 'pm', 'abend', 'night'] %}
+    {% set __index = 0 %}
 
-    {% set __superVar = __superVar|merge([__ecole, __travail, __vacance]) %}
-
-    <section class="contenu">
-      <h1>Disponibilité</h1>
-      {% for periode in __superVar %}
-        {% set index = loop.index %}
-        <div>
-          <label for="{{ periode.label }}">{{ periode.titre }} :</label>
-          <select name="candid_{{ periode.label }}" id="{{ periode.label }}" onchange="visibility_{{ index }}()">
-            <option value="1">Concerné</option>
-            <option value="0">Non Concerné</option>
-          </select>
-        </div>
-
-        <div style="display: block;" id="dispo_{{ index }}">
-          <section class="grille_dispo">
-            <p></p>
-            <p class="except">Matin</p>
-            <p class="except">Après-midi</p>
-            <p class="except">Soir</p>
-            <p class="except">Nuit</p>
-            {% for day in __days %}
-              <p>{{ day }}</p>
-              {% for hz in __hzs %}
-                <input type="checkbox" name="{{ __types[ index - 1 ] }}_{{ day|slice(0, 3)|lower}}_{{ hz }}">
-              {% endfor %}
-
-            {% endfor %}
-          </section>
-        </div>
-      {% endfor %}
-    </section>
-
-
-    <section class="contenu">
-      <h1>Objectifs au sein de la police (IG)</h1>
-
-      <div>
-        <label for="unite">Quelles unités de la police souhaitez-vous intégrer ?</label>
-        <input type="text" name="candid_unite" id="unite" placeholder="SWAT / Enseignant / K9 / etc..." required>
-      </div>
-
-      <div>
-        <label>Quels sont vos motivations ?</label>
-        <textarea id="candid_motivation" name="candid_motivations" rows="10" placeholder="Motivations" required></textarea>
-      </div>
-    </section>
-
-    <section class="contenu">
-      <h1>Test de connaissance</h1>
-
-      {% for q, question in questions %}
-        <div>
-          {% if question.type == "list" %}
-            <label for="question_{{ q }}">{{ question.title }}</label>
-            <select name="question_{{ q }}">
-              {% for r, response in question.responses %}
-                <option value="{{ r }}">{{ response }}</option>
-              {% endfor %}
-            </select>
-          {% elseif question.type == "text" %}
-            <label>{{ question.title }}</label>
-            <input type="text" name="question_{{ q }}" placeholder="Votre réponse" required>
+    {% for formulaire in formulaires %}
+      <section class="contenu">
+        <h1>{{ formulaire.section }}</h1>
+        {% for q, question in formulaire.questions %}
+          {% set __index = __index + 1 %}
+          {# Question type texte #}
+          {% if question.type == "text" %}
+            <div>
+              <label for="question_{{ __index }}">{{ question.title }}</label>
+              <input type="text" id="question_{{ __index }}" name="question_{{ __index }}" placeholder="{{ question.placeholder }}" {% if question.require %}required{% endif %}>
+            </div>
           {% endif %}
-        </div>
-      {% endfor %}
-    </section>
+
+          {# Question type long texte #}
+          {% if question.type == "longtext" %}
+            <div>
+              <label for="question_{{ __index }}">{{ question.title }}</label>
+              <textarea id="question_{{ __index }}" name="question_{{ __index }}" rows="10" placeholder="{{ question.placeholder }}" {% if question.require %}required{% endif %}></textarea>
+            </div>
+          {% endif %}
+
+          {# Question type number #}
+          {% if question.type == "number" %}
+            <div>
+              <label for="question_{{ __index }}">{{ question.title }}</label>
+              <input type="number" name="question_{{ __index }}" id="question_{{ __index }}" {% if question.min %}min="{{ question.min }}"{% endif %} {% if question.max %}max="{{ question.max }}"{% endif %} placeholder="{{ question.placeholder }}" required>
+            </div>
+          {% endif %}
+
+          {# Question type list #}
+          {% if question.type == "list" %}
+            <div>
+              <label for="question_{{ __index }}">{{ question.title }}</label>
+              <select name="question_{{ __index }}">
+                {% for r, response in question.responses %}
+                  <option value="{{ r }}">{{ response }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+
+          {# Question type date #}
+          {% if question.type == "date" %}
+            <div>
+              <label for="question_{{ __index }}">{{ question.title }} :</label>
+              <select name="question_{{ __index }}" id="date_{{ __index }}" onchange="visibility({{ __index }})">
+                <option value="1">Concerné</option>
+                <option value="0">Non Concerné</option>
+              </select>
+            </div>
+
+            <div style="display: block;" id="dispo_{{ __index }}">
+              <section class="grille_dispo">
+                <p></p>
+                <p class="except">Matin</p>
+                <p class="except">Après-midi</p>
+                <p class="except">Soir</p>
+                <p class="except">Nuit</p>
+                {% for day in __days %}
+                  <p>{{ day }}</p>
+                  {% for hz in __hzs %}
+                    <input type="checkbox" name="{{ __index }}_{{ day|slice(0, 3)|lower}}_{{ hz }}">
+                  {% endfor %}
+                {% endfor %}
+              </section>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </section>
+    {% endfor %}
 
     <section class="contenu">
       <h1>Ajouter document(s)</h1>

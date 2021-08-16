@@ -85,9 +85,8 @@
         break;
       case 1:
         $path = dirname(__FILE__);
-        $struct = getStructure($path, 'candidature');
         Flight::view()->display('candid_lspd.twig', array(
-          'questions' => $struct->questions
+          'formulaires' => getStructure($path, 'candidature')
         ));
         break;
       default:
@@ -116,16 +115,12 @@
   });
 
   Flight::route('/ajout-candidature', function() {
-    /* Déclaration de toutes les variables */
-    $discord = urlencode($_POST['candid_discord']);
-    $phone = urlencode($_POST['candid_phone']);
-    $nom = urlencode($_POST['candid_name']);
-    $prenom = urlencode($_POST['candid_firstname']);
-    $age_ig = $_POST['candid_ig'];
-    $age_irl = $_POST['candid_irl'];
-    $tps_serv = $_POST['candid_server_time'];
-    $tps_gta = $_POST['candid_gta_time'];
-    $retour_faction = $_POST['candid_faction'];
+    foreach ($_POST as $key => $value) {
+      $_POST[$key] = urlencode($value);
+    }
+    $datas = json_encode($_POST);
+
+    /* Vérifications fichiers */
     $files = $_FILES['attachments'];
 
     /* Vérification de la taille des fichiers */
@@ -138,55 +133,12 @@
     // Taille limite dépassée
     if ($taille > $tailleMax) { return Flight::redirect("/candidature"); }
 
-    /* Boucle pour les disponibilités */
-    $types = array('school', 'work', 'vacances');
-    $days = array('lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim');
-    $hzs = array('am', 'pm', 'abend', 'night');
-    $school = new ArrayObject();
-    $work = new ArrayObject();
-    $vacances = new ArrayObject();
-
-    foreach ($types as $type) {
-      $vardin = $type;
-      // Pour chaque jour
-      foreach ($days as $day) {
-        // Pour chaque période
-        foreach ($hzs as $hz) {
-          if (isset($_POST[$type . '_' . $day . '_' . $hz])) {
-            $value = 1;
-          }
-          else {
-            $value = 0;
-          }
-          $$vardin->append($value);
-        }
-      }
-      $$vardin = implode("-", iterator_to_array($$vardin));
-    }
-
-    $candid_time_school = $_POST['candid_time_school'];
-    $candid_time_work = $_POST['candid_time_work'];
-    $candid_time_vacances = $_POST['candid_time_vacances'];
-
-    $objectif = urlencode($_POST['candid_unite']); // --------------------------------
-    $candid_motivations = urlencode($_POST['candid_motivations']);
-
-    if (isset($_POST['candid_detail_faction'])) { $detail_faction = urlencode($_POST['candid_detail_faction']); } else { $detail_faction = ""; }
-
-    /* Valeur des réponses au questions */
-    $reponse = new ArrayObject();
-    for ($cpt=0; $cpt < 100; $cpt++) {
-      if (isset($_POST["question_$cpt"])) {
-        $reponse->append(urlencode($_POST["question_$cpt"]));
-      }
-    }
-
-    $concat = urlencode(implode('¤', (array)$reponse));
-
     /* Uploads des fichiers */
     $uploads = uploadFile("assets/documents/", $tailleMax, $files, array('pdf'));
 
-    ajout_bdd($discord, $nom, $prenom, $phone, $age_ig, $age_irl, $tps_serv, $tps_gta, $retour_faction, $detail_faction, $candid_time_school, $school, $candid_time_vacances, $vacances, $candid_time_work, $work, $objectif, $candid_motivations, $concat, $uploads);
+    $version = serveurIni('PARAMETRE', 'version_candidature');
+
+    ajout_bdd($version, $datas, $uploads);
 
     Flight::redirect('/Candidature/Confirm');
   });

@@ -1,63 +1,209 @@
-{
-  "questions": [
-    {
-      "type": "list",
-      "title": "Comment s'appelle la force d'intervention du LSPD ?",
-      "ecole": "Force d'intervention",
-      "responses": [
-        "GIGN - Le Groupe d'intervention de la Gendarmerie National",
-        "NOOSE",
-        "Le RAID",
-        "SWAT",
-        "Force d'intervention de la LSPD"
-      ]
-    },
-    {
-      "type": "text",
-      "title": "Qu'est-ce que l'unité K9 ?",
-      "ecole": "Unité K9"
-    },
-    {
-      "type": "list",
-      "title": "Quelle est la meilleur arme du policier ?",
-      "ecole": "Meilleur Arme",
-      "responses": [
-        "Fusil d'assault",
-        "Parole",
-        "Tazer",
-        "Sniper",
-        "Batteuse",
-        "Camion anti-émeute"
-      ]
-    },
-    {
-      "type": "list",
-      "title": "Comment s'appelle le lieu de vie d'un policier ?",
-      "ecole": "Lieu de vie",
-      "responses": [
-        "Un régiment",
-        "Une brigade",
-        "Un commissariat"
-      ]
-    },
-    {
-      "type": "list",
-      "title": "Les policiers sont-ils obligés de respecter le code de la route ?",
-      "ecole": "Code de la route",
-      "responses": [
-        "Non",
-        "Oui"
-      ]
-    },
-    {
-      "type": "list",
-      "title": "Vous recevez un ordre de votre supérieur, mais cet ordre vous met en danger : Que faîtes vous ?",
-      "ecole": "Ordre dangereux",
-      "responses": [
-        "Je le fais",
-        "Je refuse",
-        "J'en discute avec lui"
-      ]
-    }
-  ]
-}
+[
+  {
+    "section": "Inscription civil",
+    "questions": [
+      {
+        "type": "text",
+        "title": "Nom Prénom (IG) :",
+        "placeholder": "Entrer votre nom et votre prénom",
+        "ecole": "Nom/Prénom :",
+        "required": true
+      },
+      {
+        "type": "text",
+        "title": "Identifiant Discord :",
+        "placeholder": "Entrer votre identifiant discord",
+        "ecole": "Identifiant Discord :",
+        "required": true
+      },
+      {
+        "type": "text",
+        "title": "Téléphone (IG) :",
+        "placeholder": "Numero de téléphone",
+        "ecole": "Téléphone (IG) :",
+        "required": true
+      }
+    ]
+  },
+  {
+    "section": "Présentation",
+    "questions": [
+      {
+        "type": "text",
+        "title": "Nom (IG) :",
+        "placeholder": "Nom",
+        "ecole": "Nom (IG) :",
+        "required": true
+      },
+      {
+        "type": "text",
+        "title": "Prénom (IG) :",
+        "placeholder": "Prénom",
+        "ecole": "Prénom (IG) :",
+        "required": true
+      },
+      {
+        "type": "number",
+        "title": "Age (IG) :",
+        "placeholder": "Age IG",
+        "ecole": "Age (IG) :",
+        "min": 18,
+        "max": 60,
+        "required": true
+      },
+      {
+        "type": "number",
+        "title": "Age (IRL) :",
+        "placeholder": "Age IRL",
+        "ecole": "Age (IRL) :",
+        "min": 15,
+        "max": null,
+        "required": true
+      }
+    ]
+  },
+  {
+    "section": "Information",
+    "questions": [
+      {
+        "type": "number",
+        "title": "Temps de jeu sur le serveur :",
+        "min": 0,
+        "max": null,
+        "placeholder": "Temps en heure",
+        "ecole": "Temps de jeu sur le serveur :",
+        "required": true
+      },
+      {
+        "type": "number",
+        "title": "Temps de jeu GTA RP :",
+        "min": 0,
+        "max": null,
+        "placeholder": "Temps en heure",
+        "ecole": "Temps de jeu sur le serveur :",
+        "required": true
+      },
+      {
+        "type": "list",
+        "title": "Avez-vous déjà été membres des forces de l'ordre ?",
+        "ecole": "Force de l'ordre ?",
+        "responses": [
+          "Non",
+          "Oui"
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Si oui, laquelle et à quel poste ?",
+        "placeholder": "Nom + poste",
+        "ecole": "Poste ?",
+        "required": false
+      }
+    ]
+  },
+  {
+    "section": "Disponibilité",
+    "questions": [
+      {
+        "type": "date",
+        "title": "Période scolaire/alternance",
+        "ecole": "Période scolaire/alternance"
+      },
+      {
+        "type": "date",
+        "title": "Periode de Travail/Stage/Alternance",
+        "ecole": "Periode de Travail/Stage/Alternance"
+      },
+      {
+        "type": "date",
+        "title": "Période de vacances",
+        "ecole": "Période de vacances"
+      }
+    ]
+  },
+  {
+    "section": "Objectifs au sein de la police (IG)",
+    "questions": [
+      {
+        "type": "text",
+        "title": "Quelles unités de la police souhaitez-vous intégrer ?",
+        "placeholder": "SWAT / Enseignant / K9 / etc...",
+        "ecole": "Unité ?",
+        "required": true
+      },
+      {
+        "type": "longtext",
+        "title": "Quels sont vos motivations ?",
+        "placeholder": "Motivations",
+        "ecole": "Motivations ?",
+        "required": true
+      }
+    ]
+  },
+  {
+    "section": "Test de connaissance",
+    "questions": [
+      {
+        "type": "list",
+        "title": "Comment s'appelle la force d'intervention du LSPD ?",
+        "ecole": "Force d'intervention",
+        "responses": [
+          "GIGN - Le Groupe d'intervention de la Gendarmerie National",
+          "NOOSE",
+          "Le RAID",
+          "SWAT",
+          "Force d'intervention de la LSPD"
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Qu'est-ce que l'unité K9 ?",
+        "placeholder": "Votre réponse",
+        "ecole": "Unité K9",
+        "required": true
+      },
+      {
+        "type": "list",
+        "title": "Quelle est la meilleur arme du policier ?",
+        "ecole": "Meilleur Arme",
+        "responses": [
+          "Fusil d'assault",
+          "Parole",
+          "Tazer",
+          "Sniper",
+          "Batteuse",
+          "Camion anti-émeute"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Comment s'appelle le lieu de vie d'un policier ?",
+        "ecole": "Lieu de vie",
+        "responses": [
+          "Un régiment",
+          "Une brigade",
+          "Un commissariat"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Les policiers sont-ils obligés de respecter le code de la route ?",
+        "ecole": "Code de la route",
+        "responses": [
+          "Non",
+          "Oui"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Vous recevez un ordre de votre supérieur, mais cet ordre vous met en danger : Que faîtes vous ?",
+        "ecole": "Ordre dangereux",
+        "responses": [
+          "Je le fais",
+          "Je refuse",
+          "J'en discute avec lui"
+        ]
+      }
+    ]
+  }
+]
